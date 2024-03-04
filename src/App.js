@@ -14,28 +14,28 @@ import kids_banner from "./Components/Assets/banner_kids.png";
 function App() {
   return (
     <div>
-      <BrowserRouter basename="/E-Commerce">
+      <BrowserRouter>
         <Navbar />
 
         <Routes>
-          <Route path="/E-Commerce/" element={<Shop />} />
+          <Route index element={<Shop />} />
           <Route
-            path="/E-Commerce/mens"
+            path="/mens"
             element={<ShopCategory banner={men_banner} category="men" />}
           />
           <Route
-            path="/E-Commerce/womens"
+            path="/womens"
             element={<ShopCategory banner={women_banner} category="women" />}
           />
           <Route
-            path="/E-Commerce/kids"
+            path="/kids"
             element={<ShopCategory banner={kids_banner} category="kid" />}
           />
-          <Route path="/E-Commerce/product" element={<Product />}>
+          <Route path="/product" element={<Product />}>
             <Route path=":productId" element={<Product />} />
           </Route>
-          <Route path="/E-Commerce/cart" element={<Cart />} />
-          <Route path="/E-Commerce/login" element={<LoginSignup />} />
+          <Route path="/cart" element={<Cart />} />
+          <Route path="/login" element={<LoginSignup />} />
         </Routes>
         <Footer />
       </BrowserRouter>
