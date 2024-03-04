@@ -12,10 +12,10 @@ import women_banner from './Components/Assets/banner_women.png'
 import kids_banner from './Components/Assets/banner_kids.png'
 
 function App() {
-  return (
-    <div>
+  return  <div>
       <BrowserRouter>
         <Navbar />
+        <h1>Navigate to your product using menu</h1> 
         <Routes>
           <Route path="/" element={<Shop/>}/>
           <Route path="/mens" element={<ShopCategory  banner={men_banner} category="men"/>}/>
@@ -30,7 +30,7 @@ function App() {
         <Footer/>
         </BrowserRouter>
     </div>
-  );
+  
 }
 
 export default App;
